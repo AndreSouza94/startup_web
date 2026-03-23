@@ -2,7 +2,7 @@
    CONFIGURAÇÕES GERAIS E VARIÁVEIS
    ========================================================================== */
 :root {
-    --chocolate-dark: #4f2f15;
+    --chocolate-dark: #4f2f14; 
     --chocolate-medium: #6d4c41;
     --chocolate-light: #fdf5e6;
     --accent-orange: #e67e22;
@@ -83,8 +83,8 @@ p {
 .hero-section {
     padding: 100px 0;
     /* Certifique-se de usar um link direto de imagem, como este do Unsplash abaixo */
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), 
-                url('https://lh3.googleusercontent.com/gg/AMW1TPoy4BeAv3VMCWQNFYUz4s3lFqFa0Dfy7-cfSE1qgpBzty4nqKLLPGgyLya26IQjjrzucYFhOjqzr1Z2ID3OCvuLFvqYYo7ms-qNMsKzwS-7R5qi8Nk4Oiroa2FkrV7CaUy0UKmfwVMNd0dGPagW99V66RX0NBb8WE7oYB-bB7J33Z_t6Iz5=s1600-rj-mp2') center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), 
+                url('image/pascoa.jpeg') center/cover;
     color: var(--white);
     background-repeat: no-repeat;
     background-attachment: scroll; /* Ou 'fixed' para efeito parallax */
@@ -161,14 +161,14 @@ p {
    OPPORTUNITY SECTION (PRO)
    ========================================================================== */
 .opportunity-section-pro {
-    background-color: #FAF6F2;
+    background-color: #EDE6DF;
     min-height: 2vh;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center; /* Centraliza o conteúdo horizontalmente */
     justify-content: center; /* Centraliza o conteúdo verticalmente */
-    padding: 100px 20px;
+    padding: 40px 180px;
     box-sizing: border-box;
 }
 
@@ -267,19 +267,42 @@ p {
 /* ==========================================================================
    TRUTH SECTION
    ========================================================================== */
-.section-truth { background-color: var(--white); }
+.section-truth {
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 20px;  /* corrigido vírgula para espaço */
+    min-height: 100vh;
+    box-sizing: border-box;
+    text-align: left;    /* texto alinhado à esquerda */
+    align-items: stretch; /* itens ocupam largura total */
+}
+
+.section-text {
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 20px;
+    min-height: 100vh;
+    box-sizing: border-box;
+    text-align: left;
+    align-items: stretch;
+}
 
 .check-badge {
-    background-color: var(--gold-highlight);
-    color: var(--chocolate-dark);
     width: 24px;
     height: 24px;
-    border-radius: 50%;
+    margin-right: 8px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    margin-right: 12px;
+    border-radius: 50%;
+    background-color: var(--gold-highlight);
+    color: var(--chocolate-dark);
     font-weight: bold;
+    flex-shrink: 0;
 }
 
 .highlight-box-dark {
@@ -287,6 +310,178 @@ p {
     color: var(--white);
     padding: 20px;
     border-radius: 12px;
+}
+
+/* Primeiro e terceiro com a mesma cor */
+.truth-support-text p:first-child,
+.transition-text {
+    color: #8B5E4B;
+    margin-left: 0;
+    padding-left: 0;
+    font-size: 16px; /* ajuste se precisar */
+    font-weight: 400;
+}
+
+/* Segundo diferente */
+.truth-support-text p:nth-child(2) {
+    color: #4E2F1B; /* ou a cor que você quiser */
+    font-size: 18px;
+    font-weight: 480;
+}
+
+.custom-list-gold {
+    list-style: none;
+    margin-left: 3px;
+    padding-left: 0;
+}
+
+.custom-list-gold li {
+    display: flex;
+    align-items: center;
+    gap: 0;             /* já usamos margin-right no check-badge */
+    font-size: 16px;    /* ajuste igual ao texto acima */
+    line-height: 1.4;
+    margin-bottom: 12px;
+}
+
+.highlight-box-dark {
+    background-color: var(--chocolate-dark);
+    color: var(--white);
+    padding: 15px 20px;
+    font-size: 16px;
+    max-width: 500px;
+    margin-left: 0px;   /* mesma margem que os parágrafos */
+    margin-top: 20px;
+    display: flex;
+}
+
+.image-container-truth {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;  /* espaçamento da imagem em relação ao texto */
+}
+
+/* ==========================================================================
+   LIGHT SECTION
+   ========================================================================== */
+
+   .section-light {
+    background-color: #EDE6DF;
+    min-height: 2vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
+    justify-content: center; /* Centraliza o conteúdo verticalmente */
+    padding: 100px 20px;
+    box-sizing: border-box;
+}
+
+.benefit-box {
+    border-radius: 20px;        /* bordas mais arredondadas */
+    padding: 30px, 25px;              /* mantém espaçamento interno */
+    font-size: 14px;            /* letras menores */
+    transition: all 0.3s ease;  /* efeito suave */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05); /* leve sombra */
+    min-height: 150px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Box de oferta em destaque */
+.featured-offer-box {
+    background-color: #4E2F1B;    /* cor de fundo escura */
+    color: #FFFFFF;               /* texto branco */
+    border-radius: 20px;          /* bordas arredondadas */
+    min-height: 330px;
+    max-width: 95%;            /* altura mínima */
+    padding: 2rem;                /* espaçamento interno */
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1); /* sombra suave */
+}
+
+/* Badge "NOVO" */
+.featured-offer-box .badge-new {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: #E9BD6C;
+    color: #4E2F1B;
+    font-weight: bold;
+    padding: 0.3rem 0.8rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+}
+
+/* Placeholder do livro/ícone */
+.book-placeholder {
+    background-color: #fff;
+    color: #4E2F1B;
+    border-radius: 15px;
+    padding: 1.5rem;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.book-placeholder span {
+    font-size: 3rem;
+}
+
+.book-placeholder p {
+    font-size: 0.85rem;
+    font-weight: bold;
+    margin-top: 0.5rem;
+}
+
+/* Títulos e parágrafos */
+.featured-offer-box h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #FFF8EE;
+}
+
+.featured-offer-box p {
+    font-size: 1rem;
+    opacity: 0.85;
+    color: #E8C992;
+}
+
+/* Botão CTA */
+.featured-offer-box .btn-cta {
+    background-color: #E9BD6C;
+    color: #4E2F1B;
+    font-weight: bold;
+    padding: 0.8rem 2rem;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.featured-offer-box .btn-cta:hover {
+    background-color: #d4a94f;
+    color: #fff;
+}
+
+
+/* Títulos dentro da box */
+.benefit-box h5 {
+    font-size: 16px;            /* tamanho menor que antes */
+    margin-bottom: 6px;
+}
+
+/* Parágrafos dentro da box */
+.benefit-box p {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.icon-title {
+    color: #E9BD6C;
+    font-size: 14px;
+    margin-right: 4px;
 }
 
 /* ==========================================================================
