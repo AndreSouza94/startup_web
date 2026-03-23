@@ -1,0 +1,523 @@
+/* ==========================================================================
+   CONFIGURAÇÕES GERAIS E VARIÁVEIS
+   ========================================================================== */
+:root {
+    --chocolate-dark: #4f2f15;
+    --chocolate-medium: #6d4c41;
+    --chocolate-light: #fdf5e6;
+    --accent-orange: #e67e22;
+    --white: #ffffff;
+    --gold-highlight: #E8C44A;
+    --soft-cream: #FAF6F2;
+    --brown-gold: #B07E4A;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--chocolate-light);
+    color: var(--chocolate-dark);
+    line-height: 1.6;
+}
+
+h2, .main-title-pro, .truth-title, .faq-main-title, .premium-title, .guarantee-title, .u-header {
+    font-family: "Playfair Display", Georgia, serif !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    color: rgb(78, 47, 20) !important;
+    font-size: 48px !important;
+    line-height: 48px !important;
+}
+
+h1,h3, h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    font-weight: 700;
+    color: #3d2314;
+}
+
+@media (max-width: 768px) {
+    h2, .main-title-pro, .truth-title, .faq-main-title, .premium-title {
+        font-size: 32px !important;
+        line-height: 36px !important;
+    }
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #6d4c41;
+}
+/* ==========================================================================
+   COMPONENTES GLOBAIS (BOTÕES E HIGHLIGHTS)
+   ========================================================================== */
+.highlight-gold {
+    color: var(--gold-highlight);
+    font-weight: 800;
+}
+
+.btn-cta, .btn-cta-final, .u-btn-main {
+    background-color: var(--accent-orange) !important;
+    color: var(--white) !important;
+    padding: 18px 35px;
+    font-weight: 800;
+    font-size: 1.1rem;
+    border-radius: 50px !important;
+    border: none;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.btn-cta:hover, .btn-cta-final:hover, .u-btn-main:hover {
+    background-color: var(--chocolate-dark) !important;
+    color: var(--gold-highlight) !important;
+    transform: translateY(-3px);
+}
+
+/* ==========================================================================
+   HERO SECTION
+   ========================================================================== */
+.hero-section {
+    padding: 100px 0;
+    /* Certifique-se de usar um link direto de imagem, como este do Unsplash abaixo */
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), 
+                url('https://lh3.googleusercontent.com/gg/AMW1TPoy4BeAv3VMCWQNFYUz4s3lFqFa0Dfy7-cfSE1qgpBzty4nqKLLPGgyLya26IQjjrzucYFhOjqzr1Z2ID3OCvuLFvqYYo7ms-qNMsKzwS-7R5qi8Nk4Oiroa2FkrV7CaUy0UKmfwVMNd0dGPagW99V66RX0NBb8WE7oYB-bB7J33Z_t6Iz5=s1600-rj-mp2') center/cover;
+    color: var(--white);
+    background-repeat: no-repeat;
+    background-attachment: scroll; /* Ou 'fixed' para efeito parallax */
+}
+
+.hero-section h1 {
+    color: #ffffff; /* H1 branco */
+}
+
+.hero-section h2.cta-headline {
+    color: #f1f1f1; /* H2 um pouco cinza claro */
+}
+
+.hero-section .lead {
+    color: #e0e0e0; /* Lead mais claro */
+}
+
+/* Estreita o conteúdo da Hero Section */
+.hero-section .container {
+    max-width: 850px; /* Limita a largura para o texto não ficar muito espalhado */
+    margin: 0 auto;
+}
+
+/* Reduz o tamanho do H1 principal */
+.hero-section h1.display-4 {
+    font-size: 42px !important; /* Letra menor para o título principal */
+    line-height: 1.2;
+}
+
+/* Reduz os parágrafos de apoio */
+.hero-section p.fs-4 {
+    font-size: 18px !important; /* Diminuindo o "Você não precisa ser confeiteira" */
+}
+
+.hero-section p.lead {
+    font-size: 16px !important; /* Diminuindo o "Você só precisa de um método simples" */
+}
+
+/* Aplica a regra específica de 48px que você pediu para o H2 na Hero */
+.hero-section h2.cta-headline {
+    font-family: "Playfair Display", Georgia, serif !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    color: rgb(255, 255, 255) !important; /* Mantive branco para destacar no fundo escuro */
+    font-size: 40px !important; /* Ajustado levemente para 40px para não ficar maior que o H1 no layout estreito */
+    line-height: 44px !important;
+}
+
+/* Ajuste do botão e texto auxiliar */
+.hero-section .btn-cta {
+    padding: 15px 30px;
+    font-size: 16px;
+}
+
+.hero-section .small-orange-text {
+    font-size: 12px; /* Letra bem pequena no rodapé do botão */
+}
+
+.text-soft-cream { color: var(--soft-cream) !important; }
+
+.cta-headline {
+    color: var(--gold-highlight);
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.small-orange-text {
+    color: var(--accent-orange);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   OPPORTUNITY SECTION (PRO)
+   ========================================================================== */
+.opportunity-section-pro {
+    background-color: #FAF6F2;
+    min-height: 2vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
+    justify-content: center; /* Centraliza o conteúdo verticalmente */
+    padding: 100px 20px;
+    box-sizing: border-box;
+}
+
+.viewport-wrapper {
+    width: 100%;
+    max-width: 700px; /* Reduzi para o conteúdo não ficar tão espalhado */
+    margin: 0 auto;
+}
+
+.content-limit {
+    text-align: center;
+    width: 100%;
+}
+
+/* Garante que o box de citação e o botão fiquem no centro */
+.quote-box-pro {
+    background-color: #FFFFFF;
+    border-left: 4px solid #E8C44A; /* Barra dourada mais fina */
+    padding: 12px 20px; /* Reduzi o espaço interno */
+    display: block;
+    width: 100%;
+    max-width: 600px; /* Reduzi a largura do box da seção */
+    margin: 20px auto;
+    text-align: left;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+}
+
+.quote-inner {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 18px; /* Letra bem menor como solicitado */
+    color: #3d2314;
+    margin: 0;
+}
+
+.btn-box-pro {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.btn-action-pro {
+    background-color: var(--chocolate-dark);
+    color: var(--white);
+    padding: 15px 35px;
+    border-radius: 10px;
+    font-weight: 700;
+    margin: 20px auto;
+    display: block;
+    border: none;
+}
+
+/* Grid de Cards Centralizado */
+.cards-row-pro {
+    display: flex; 
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Garante que quebre linha no telemóvel */
+    margin-top: 20px;
+}
+
+.card-item-pro {
+    background: #FFFFFF;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    width: 100%;
+    max-width: 210px; 
+    text-align: center;
+}
+
+.icon-pro {
+    font-size: 24px; /* Ícone um pouco menor */
+    margin-bottom: 10px;
+}
+
+.card-item-pro p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 11px; /* Letra reduzida para o visual limpo */
+    color: var(--chocolate-medium);
+    margin: 0;
+    line-height: 1.4;
+}
+
+@media (max-width: 992px) {
+    .cards-row-pro {
+        grid-template-columns: 1fr; /* Empilha no mobile */
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* ==========================================================================
+   TRUTH SECTION
+   ========================================================================== */
+.section-truth { background-color: var(--white); }
+
+.check-badge {
+    background-color: var(--gold-highlight);
+    color: var(--chocolate-dark);
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+    font-weight: bold;
+}
+
+.highlight-box-dark {
+    background-color: var(--chocolate-dark);
+    color: var(--white);
+    padding: 20px;
+    border-radius: 12px;
+}
+
+/* ==========================================================================
+   BENEFITS & TESTIMONIALS
+   ========================================================================== */
+
+.testimonials-pro {
+    background-color: #faf6f2; /* Cor de fundo atualizada */
+    padding: 80px 0;
+}
+/* Container Estreito conforme a foto */
+.container-narrow {
+    max-width: 900px; /* Estreita a secção de depoimentos */
+    margin: 0 auto;
+}
+
+/* Título conforme especificação anterior */
+.testimonial-main-title {
+    font-family: "Playfair Display", Georgia, serif !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    color: rgb(78, 47, 20) !important;
+    font-size: 48px !important;
+    line-height: 48px !important;
+    margin-bottom: 10px;
+}
+
+.testimonial-subtitle {
+    font-size: 14px;
+    color: #8d6e63;
+    margin-bottom: 40px;
+}
+
+/* Estilo do Card de Depoimento */
+.t-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #f9f1eb;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.stars {
+    color: var(--gold-highlight);
+    font-size: 13px; /* Estrelas menores */
+    margin-bottom: 10px;
+}
+
+.t-quote {
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px; /* Letra mantida pequena */
+    color: #5d4037;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.t-badge {
+    background-color: var(--chocolate-dark);
+    color: var(--gold-highlight);
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 10px; /* Texto da badge menor */
+    font-weight: 700;
+    align-self: flex-start;
+}
+
+.t-card {
+    background-color: #fcf9f2; /* Cor de fundo atualizada conforme solicitado */
+    padding: 18px; /* Reduzi muito o padding interno para diminuir o card */
+    border-radius: 12px;
+    border: 1px solid rgba(176, 126, 74, 0.1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    max-width: 260px; /* Limita a largura do card para ele não expandir demais */
+    margin: 0 auto; /* Centraliza o card na coluna do Bootstrap */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+}
+
+.t-divider {
+    border: none;
+    border-top: 1px solid rgba(176, 126, 74, 0.1); /* Linha sutil da cor do tema */
+    margin: 15px 0;
+}
+
+/* Info do Usuário */
+.t-user {
+    display: flex;
+    align-items: center;
+}
+
+.avatar-small {
+    width: 30px; /* Avatar menor */
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover;
+}
+
+.t-meta {
+    display: flex;
+    flex-direction: column;
+}
+
+.t-name {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--chocolate-dark);
+}
+
+.t-loc {
+    font-size: 10px;
+    color: #a1887f;
+}
+
+/* ==========================================================================
+   OFFER & TIMER SECTION
+   ========================================================================== */
+.final-offer-section {
+    background: radial-gradient(circle, #5D3A1A 0%, #3D2314 100%);
+    color: var(--soft-cream);
+}
+
+.timer-container {
+    gap: 10px;
+}
+
+.timer-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.offer-card {
+    background-color: #7A5533;
+    max-width: 550px;
+    border-radius: 30px;
+    padding: 45px;
+    border: 1px solid rgba(232, 196, 74, 0.2);
+}
+
+.main-price-display { color: var(--gold-highlight); margin: 20px 0; }
+.price-big { font-size: 4.5rem; font-weight: 900; }
+
+.order-bump-premium {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px dashed var(--gold-highlight);
+    border-radius: 15px;
+    color: var(--white);
+}
+
+/* ==========================================================================
+   UPSELL & FAQ
+   ========================================================================== */
+.upsell-dark-card {
+    background: #1a0f0a;
+    border: 2px solid var(--gold-highlight);
+    border-radius: 25px;
+    padding: 40px;
+    color: var(--white);
+}
+
+.faq-card {
+    background-color: #FDFBFA;
+    border-radius: 15px; /* Bordas mais suaves */
+    padding: 15px 20px; /* Box menor (menos padding) */
+    border: 1px solid rgba(176, 126, 74, 0.1); /* Box visível */
+    display: flex;
+    align-items: center;
+    max-width: 700px; /* Diminuí a largura total do box do FAQ */
+    margin: 0 auto 15px auto; /* Centraliza o box na seção */
+}
+
+.faq-icon-box {
+    background-color: #5A3418 !important;
+    color: #E8C44A !important;
+    width: 45px; /* Ícone menor */
+    height: 45px;
+    min-width: 45px;
+    border-radius: 10px;
+    font-size: 18px; /* Ícone interno menor */
+}
+
+.faq-question {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 18px; /* Letra da pergunta diminuída */
+    color: #3d2314;
+    margin-bottom: 2px;
+}
+
+.faq-answer {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px; /* Letra da resposta bem pequena */
+    color: #6d4c41;
+    line-height: 1.4;
+}
+
+/* ==========================================================================
+   GUARANTEE SECTION
+   ========================================================================== */
+.guarantee-card {
+    background: var(--white);
+    border-radius: 30px;
+    padding: 50px;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+}
+
+.risco-zero-box {
+    background: var(--chocolate-light);
+    padding: 15px;
+    border-radius: 50px;
+    font-weight: 800;
+    color: var(--brown-gold);
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE
+   ========================================================================== */
+
+
+
+/* Garantia de Centralização Global */
+.offer-card, .guarantee-card, .upsell-dark-card {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
