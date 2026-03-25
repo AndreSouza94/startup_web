@@ -291,25 +291,35 @@
     </div>
 </section>
 
-<section id="oferta" class="final-offer-section py-5">
-    <div class="container text-center py-5" data-aos="fade-up">
+<section id="offer" class="final-offer-section py-5">
+    <div class="container text-center" data-aos="fade-up">
         
-        <h2 class="premium-title mb-5">Garanta seu acesso agora</h2>
+        <h2 class="premium-title mb-4">Garanta seu acesso agora</h2>
 
         <div class="scarcity-timer mb-5">
             <p class="timer-label">ESTA OFERTA EXPIRA EM</p>
             <div class="timer-container d-flex justify-content-center align-items-center">
-                <div class="timer-box"><span id="hours">23</span><small>HORAS</small></div>
+                <div class="timer-group">
+                    <div class="timer-box"><span id="hours">23</span></div>
+                    <small>HORAS</small>
+                </div>
                 <span class="timer-sep">:</span>
-                <div class="timer-box"><span id="minutes">59</span><small>MIN</small></div>
+                <div class="timer-group">
+                    <div class="timer-box"><span id="minutes">59</span></div>
+                    <small>MIN</small>
+                </div>
                 <span class="timer-sep">:</span>
-                <div class="timer-box"><span id="seconds">00</span><small>SEG</small></div>
+                <div class="timer-group">
+                    <div class="timer-box"><span id="seconds">00</span></div>
+                    <small>SEG</small>
+                </div>
             </div>
         </div>
 
         <div class="offer-card mx-auto shadow-lg">
+            
             <div class="card-header-price">
-                <p class="mb-0">De <span class="old-price-text">R$ 67,90</span></p>
+                <p class="mb-0">De <span class="old-price-text"><br>R$ 67,90</span></p>
                 <p class="mb-1 mt-2">Por apenas</p>
             </div>
 
@@ -318,31 +328,25 @@
                 <span id="totalPrice" class="price-big">37,90</span>
             </div>
 
-        <div class="order-bump-premium my-4">
-                <p class="order-text mb-0">
-                    Menos que o preço de um ovo de Páscoa…<br>
-                    <strong>mas com potencial de te gerar vários.</strong>
-                </p>
-            </div>
+            <div class="order-bump-premium p-3 my-4">
+                <div class="form-check d-flex align-items-center justify-content-center">
+                    <label class="form-check-label order-text" for="orderBump">
+                        Menos que o preço de um ovo de Páscoa…<br>
+                        <strong>mas com potencial de te gerar vários.</strong>
+
+                    </label>
+                </div>
             </div>
 
-            <a href="#" class="btn btn-cta-final mb-4">QUERO GARANTIR MEU ACESSO</a>
+            <a href="#" class="btn btn-cta-final">QUERO GARANTIR MEU ACESSO</a>
 
             <div class="card-footer-trust">
-                <div class="col-4">
-                    <i class="fas fa-shield-alt"></i>
-                    <span class="d-block mt-1" style="font-size: 0.7rem;">7 dias de garantia</span>
-                </div>
-                <div class="col-4">
-                    <i class="fas fa-download"></i>
-                    <span class="d-block mt-1" style="font-size: 0.7rem;">Acesso imediato</span>
-                </div>
-                <div class="col-4">
-                    <i class="fas fa-lock"></i>
-                    <span class="d-block mt-1" style="font-size: 0.7rem;">Compra segura</span>
-                </div>
+                <div><i class="fas fa-shield-alt"></i><span class="d-block mt-1">7 dias de garantia</span></div>
+                <div><i class="fas fa-download"></i><span class="d-block mt-1">Acesso imediato</span></div>
+                <div><i class="fas fa-lock"></i><span class="d-block mt-1">Compra segura</span></div>
             </div>
         </div>
+
     </div>
 </section>
 <section class="faq-section py-5">
@@ -397,87 +401,96 @@
     </div>
 </section>
 
-<section class="upsell-section-dark py-5">
-    <div class="bg-circle circle-1"></div>
-    <div class="bg-circle circle-2"></div>
+<section class="upsell-container py-5">
+    <div class="container d-flex justify-content-center">
+        
+        <div class="upsell-card shadow-sm">
+            
+            <span class="badge-special">OFERTA ESPECIAL</span>
 
-    <div class="container d-flex justify-content-center position-relative">
-        <div class="upsell-dark-card text-center" data-aos="fade-up">
-            
-            <p class="u-badge">OFERTA EXCLUSIVA</p>
-            <h2 class="u-headline">Quer lucrar ainda mais?</h2>
-            
-            <div class="product-img-box my-4">
-                <img src="URL_DA_CAPA_LIVRO_2" alt="Capa Livro 2" class="u-img">
+            <h2 class="upsell-title">Quer lucrar ainda mais?</h2>
+
+            <div class="book-mockup-container mb-4">
+                <img src="URL_DA_SUA_IMAGEM_AQUI" alt="Ebook Páscoa Especial" class="img-fluid book-img">
             </div>
 
-            <p class="u-offer-text">Adicione o Livro 2 por apenas:</p>
+            <p class="price-intro">Adicione o <strong>Livro 2</strong> por apenas</p>
             
-            <div class="u-price-box mb-4">
-                <span class="u-rs">R$</span>
-                <span class="u-val">19</span>
-                <span class="u-cents">,90</span>
+            <div class="upsell-price-display mb-4">
+                <span class="p-currency">R$</span>
+                <span class="p-main">19</span>
+                <span class="p-cents">,90</span>
             </div>
 
-            <div class="u-cta-box">
-                <button class="u-btn-main w-100">
-                    ADICIONAR LIVRO 2 POR R$ 19,90
-                </button>
-                <div class="u-footer-icons mt-3">
-                    <span>🛡️ Compra segura</span>
-                    <span>⚡ Acesso imediato</span>
+            <div class="row g-3 mb-4">
+                <div class="col-4">
+                    <div class="feature-box">
+                        <i class="fas fa-utensils"></i>
+                        <p><strong>✓ Receitas gourmet</strong><br>Ovos e bombons de alto padrão</p>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="feature-box">
+                        <i class="fas fa-tags"></i>
+                        <p><strong>✓ Produtos valorizados</strong><br>Venda pelo dobro do básico</p>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="feature-box">
+                        <i class="fas fa-dollar-sign"></i>
+                        <p><strong>✓ Lucro maior</strong><br>Mais margem por unidade vendida</p>
+                    </div>
                 </div>
             </div>
+
+            <div class="highlight-text-bar mb-4">
+                Ideal para quem quer <strong>sair do básico e ganhar mais.</strong>
+            </div>
+
+            <a href="#" class="btn-add-upsell">
+                ADICIONAR LIVRO 2 POR R$ 19,90
+            </a>
 
         </div>
     </div>
-</section>    <div class="container d-flex justify-content-center">
-        <div class="guarantee-card text-center" data-aos="zoom-in">
+</section> 
+
+<section class="guarantee-wrap py-5">
+    <div class="container d-flex justify-content-center" data-aos="zoom-in">
+        
+        <div class="guarantee-card-final shadow-sm">
             
-            <div class="main-check-icon mb-4">
-                <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="40" cy="40" r="40" fill="#E8C44A"/>
-                    <path d="M25 40L35 50L55 30" stroke="#5A3418" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
+            <div class="g-icon-circle mb-4">
+                <i class="fas fa-shield-alt"></i>
             </div>
 
-            <h2 class="guarantee-title">Garantia de 7 Dias</h2>
-            <p class="guarantee-text">
-                Você tem 7 dias de garantia total. Se não gostar ou não for para você, é só pedir reembolso.
+            <h2 class="g-title mb-3">Garantia de 7 Dias</h2>
+            
+            <p class="g-text mb-4">
+                Você tem <strong>7 dias de garantia total</strong>. Se não gostar ou não for para você, é só pedir reembolso.
             </p>
 
-            <div class="risco-zero-box my-4 d-flex align-items-center justify-content-center">
-                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="me-2">
-                    <path d="M7 13L12 18L22 8" stroke="#5A3418" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M2 11V17C2 18.1046 2.89543 19 4 19H10" stroke="#5A3418" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M10 5H4C2.89543 5 2 5.89543 2 7V11H10V5Z" stroke="#5A3418" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                <span>Risco zero</span>
+            <div class="g-risk-pill mb-4">
+                <span class="g-hand">👉</span> <span class="g-risk-text">Risco zero</span>
             </div>
 
-            <p class="guarantee-subtext mb-4">
+            <p class="g-trust-text mb-4">
                 Você compra com total confiança! Se não funcionar para você, devolvemos 100% do seu dinheiro.
             </p>
 
-            <hr class="guarantee-divider">
+            <hr class="g-divider mb-4">
 
-            <div class="row guarantee-footer mt-4">
-                <div class="col-md-4 mb-3 mb-md-0">
-                    <div class="footer-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E8C44A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                    </div>
+            <div class="row g-0 g-footer-grid">
+                <div class="col-4">
+                    <i class="far fa-clock"></i>
                     <span>7 dias de garantia</span>
                 </div>
-                <div class="col-md-4 mb-3 mb-md-0">
-                    <div class="footer-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E8C44A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
-                    </div>
+                <div class="col-4">
+                    <i class="fas fa-dollar-sign"></i>
                     <span>Reembolso total</span>
                 </div>
-                <div class="col-md-4">
-                    <div class="footer-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E8C44A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l8.84-8.84 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-                    </div>
+                <div class="col-4">
+                    <i class="far fa-smile"></i>
                     <span>Sem perguntas</span>
                 </div>
             </div>

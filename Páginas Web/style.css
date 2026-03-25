@@ -619,10 +619,11 @@ p {
    ========================================================================== */
 /* FUNDO DA SECTION */
 .final-offer-section {
-    background: linear-gradient(135deg, #5a391b, #6b4521);
-    color: #fff;
+    /* Aplicando as 4 cores em um gradiente linear de 135 graus */
+    background: linear-gradient(135deg, #65401E, #5D3A1A, #613C1C, #5F3F1A);
+    padding: 100px 0;
     position: relative;
-    overflow: hidden;
+    color: #ffffff;
 }
 
 /* TÍTULO */
@@ -635,52 +636,112 @@ p {
 }
 
 /* TIMER */
-.timer-label {
-    font-size: 0.8rem;
-    letter-spacing: 2px;
-    color: #d8b98a;
-}
 
 .timer-container {
     gap: 10px;
 }
 
-.timer-box {
-    background: #2b1406;
-    padding: 10px 14px;
-    border-radius: 8px;
-    text-align: center;
-    min-width: 60px;
-}
-
-.timer-box span {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #f7c873;
-}
-
-.timer-box small {
-    display: block;
-    font-size: 0.6rem;
-    color: #caa56a;
-}
-
-.timer-sep {
-    font-size: 1.5rem;
-    color: #f7c873;
-}
-
-/* CARD */
-.offer-card {
-    background: #7b5736;
-    border-radius: 20px;
-    padding: 30px 25px 20px 25px; /* menos padding embaixo */
-    max-width: 400px;
-    border: 1px solid rgba(255, 215, 150, 0.3);
+/* Estilo do Timer igual ao da imagem 607798.png */
+.timer-group {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
+.timer-box {
+    background: #2b1406;
+    width: 65px;
+    height: 65px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1.5px solid #F5D87A !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.timer-box span {
+    color: #F5D87A; /* Dourado para os números */
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.timer-group small {
+    color: #F5D87A;
+    font-size: 11px;
+    margin-top: 8px;
+    font-weight: 600;
+}
+
+.timer-sep {
+    color: #F5D87A;
+    font-size: 32px;
+    margin: 0 10px;
+    padding-bottom: 25px; /* Alinha os dois pontos com os boxes */
+}
+
+.timer-label {
+    color: #d8b98a;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* CARD */
+/* Card Principal (A moldura marrom) */
+.offer-card {
+    background-color: #7A5533 !important;
+    padding: 45px 35px !important;
+    border-radius: 25px;
+    max-width: 450px;
+    margin: 40px auto 0 auto;
+    border: 2px solid #F5D87A !important; 
+    box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Título Branco conforme sua imagem */
+.offer-card .premium-title {
+    font-family: 'Playfair Display', serif !important;
+    font-weight: 400 !important;
+    font-size: 48px !important;
+    color: #ffffff !important;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Container das informações de preço */
+.card-header-price {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Cor do "De" e do preço riscado */
+.card-header-price p:first-child, 
+.card-header-price .old-price-text {
+    color: #E8C44A !important; /* Bronze Dourado solicitado */
+    font-size: 0.95rem;
+    margin-bottom: 0;
+}
+
+/* Garante que o risco do preço antigo apareça */
+.old-price-text {
+    text-decoration: line-through;
+    font-weight: 500;
+}
+
+/* Cor do "Por apenas" em Branco */
+.card-header-price p:last-child {
+    color: #ffffff !important; /* Branco puro para destaque */
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-top: 5px;
+}
+
+
 
 /* PREÇO ANTIGO */
 .old-price-text {
@@ -707,7 +768,7 @@ p {
 
 /* CAIXA DE TEXTO */
 .order-bump-premium {
-    background: #8c6a42;
+    background: #886531;
     border-radius: 10px;
     padding: 12px 15px;
     text-align: center;
@@ -716,7 +777,7 @@ p {
 
 .order-text {
     font-size: 0.75rem; /* menor, igual da imagem */
-    color: #f5e6d3;
+    color: #f7c873;
     line-height: 1.4;
 }
 
@@ -748,90 +809,359 @@ p {
 }
 
 /* FOOTER ICONES */
-.card-footer-trust i {
-    color: #f7c873;
-    font-size: 1.2rem;
-}
-
+/* Container pai: distribui os 3 selos pelo card */
 .card-footer-trust {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Espalha os itens */
+    align-items: center;
     width: 100%;
-    margin-top: 15px;
+    margin-top: 20px;
     padding-top: 15px;
-    border-top: 1px solid rgba(255, 215, 150, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    gap: 10px; /* Espaço entre cada um dos 3 blocos */
 }
 
+/* Cada bloco individual (ícone + texto) */
 .card-footer-trust div {
-    flex: 1;
-    text-align: center;
+    display: flex;
+    align-items: center; /* Alinha ícone e texto verticalmente no centro */
+    gap: 5px; /* Espaço entre o ícone e a palavra */
 }
+
+/* O texto (span) ajustado para horizontal e cor bronze */
+.card-footer-trust .d-block {
+    display: inline-block !important; /* Força a ficar na mesma linha do ícone */
+    color: #E8C44A !important;
+    font-size: 9px !important; /* Letra menor para caber tudo em uma linha */
+    margin-top: 0 !important; /* Remove a margem que jogava para baixo */
+    text-transform: uppercase;
+    white-space: nowrap; /* Impede que o texto quebre linha */
+    letter-spacing: 0.3px;
+}
+
+/* Ícone na mesma cor e tamanho ajustado */
+.card-footer-trust i {
+    color: #E8C44A !important;
+    font-size: 0.9rem;
+}
+
 
 /* ==========================================================================
    UPSELL & FAQ
    ========================================================================== */
-.upsell-dark-card {
-    background: #1a0f0a;
-    border: 2px solid var(--gold-highlight);
-    border-radius: 25px;
-    padding: 40px;
-    color: var(--white);
+/* CONTAINER GERAL */
+.upsell-container {
+    background-color: #faf6f2;
 }
 
+/* CARD DE UPSELL */
+.upsell-card {
+   background-color: #ffffff;
+    border: 1px solid #F5D87A;
+    border-radius: 30px;
+    padding: 50px 20px; 
+    max-width: 520px; 
+    width: 100%;
+    position: relative;
+    text-align: center;
+    margin: 0 auto; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+/* ETIQUETA LARANJA */
+.badge-special {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #e67e22;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 6px 15px;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+
+/* TÍTULO UPSELL */
+.upsell-title {
+    font-family: "Playfair Display", serif !important;
+    font-size: 36px !important;
+    color: rgb(78, 47, 20) !important;
+    margin-bottom: 30px;
+}
+
+/* MOCKUP DO LIVRO */
+.book-img {
+    max-width: 180px;
+    border: 3px solid #F5D87A;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* ESTILO DO PREÇO */
+.price-intro {
+    color: #8b5e2a;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.upsell-price-display {
+    color: #3d2314;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    font-weight: 800;
+}
+
+.p-currency { font-size: 18px; margin-right: 5px; }
+.p-main { font-size: 60px; line-height: 1; }
+.p-cents { font-size: 24px; }
+
+/* GRID DE BENEFÍCIOS (CARDZINHOS) */
+.feature-box {
+    background-color: #fdf8f2; /* Fundo suave solicitado para cards */
+    padding: 15px 10px;
+    border-radius: 12px;
+    height: 100%;
+}
+
+.feature-box i {
+    color: #3d2314;
+    font-size: 18px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.feature-box p {
+    font-size: 10px; /* Letra pequena conforme solicitado */
+    color: #8b5e2a;
+    line-height: 1.3;
+    margin: 0;
+}
+
+/* BARRA DE DESTAQUE */
+.highlight-text-bar {
+    background-color: #fcf9f2;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #3d2314;
+    border: 1px solid rgba(176, 126, 74, 0.1);
+}
+
+/* BOTÃO ESCURO (ESTILO DA IMAGEM) */
+.btn-add-upsell {
+    background-color: #3d2314; /* Marrom chocolate escuro */
+    color: #ffffff;
+    display: block;
+    width: 100%;
+    padding: 18px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.btn-add-upsell:hover {
+    background-color: #52301c;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+/* FUNDO DA SEÇÃO FAQ */
+.faq-section {
+    background-color: #FFFFFF; /* Mantém o fundo bem limpo */
+    padding: 80px 20px;
+}
+
+/* TÍTULO PRINCIPAL DO FAQ */
+.faq-main-title {
+    font-family: "Playfair Display", Georgia, serif !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    color: rgb(78, 47, 20) !important;
+    font-size: 36px !important;
+    line-height: 40px !important;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* SUBTÍTULO DO FAQ */
+.faq-subtitle {
+    font-family: 'Nunito', sans-serif !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    color: rgb(139, 94, 42) !important;
+    font-size: 18px !important;
+    line-height: 28px !important;
+    margin-bottom: 40px;
+    text-align: center;
+    display: block; /* Garante que ocupe a linha toda para centralizar */
+}
+
+/* BOX DO FAQ (ESTILO MINIMALISTA) */
 .faq-card {
-    background-color: #FDFBFA;
-    border-radius: 15px; /* Bordas mais suaves */
-    padding: 15px 20px; /* Box menor (menos padding) */
-    border: 1px solid rgba(176, 126, 74, 0.1); /* Box visível */
+    background-color: #FDF8F2; /* Cor de fundo suave solicitada */
+    border-radius: 12px; /* Bordas um pouco mais retas para o minimalismo */
+    padding: 15px 25px; /* Espaçamento interno justo */
+    
+    /* Borda no estilo solicitado (#F5D87A), porém fina para ser minimalista */
+    border: 1px solid #F5D87A; 
+    
     display: flex;
     align-items: center;
-    max-width: 700px; /* Diminuí a largura total do box do FAQ */
-    margin: 0 auto 15px auto; /* Centraliza o box na seção */
+    max-width: 750px; /* Largura estreita conforme a imagem */
+    margin: 0 auto 12px auto; /* Reduzi o espaço entre um card e outro */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.02); /* Sombra quase invisível */
 }
 
+/* CAIXINHA DO ÍCONE */
 .faq-icon-box {
-    background-color: #5A3418 !important;
-    color: #E8C44A !important;
-    width: 45px; /* Ícone menor */
-    height: 45px;
-    min-width: 45px;
-    border-radius: 10px;
-    font-size: 18px; /* Ícone interno menor */
+    background-color: #5A3418 !important; /* Marrom escuro */
+    color: #fff !important; /* Ícone no dourado da borda */
+    width: 38px; /* Ícone ainda menor para ser minimalista */
+    height: 38px;
+    min-width: 38px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px; /* Símbolo pequeno */
 }
 
+/* ESTILO DA PERGUNTA CONFORME ESPECIFICAÇÃO */
 .faq-question {
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
-    font-size: 18px; /* Letra da pergunta diminuída */
-    color: #3d2314;
-    margin-bottom: 2px;
+    font-family: "Playfair Display", Georgia, serif !important;
+    font-style: italic !important;
+    font-weight: 400 !important; /* Peso leve conforme solicitado */
+    color: rgb(78, 47, 20) !important; /* Marrom escuro específico */
+    font-size: 16px !important;
+    line-height: 28px !important;
+    margin-bottom: 5px; /* Espaço sutil para a resposta */
+    display: block;
 }
 
-.faq-answer {
+/* Ajuste na resposta para acompanhar a nova hierarquia */
+.faq-answer{
     font-family: 'Poppins', sans-serif;
-    font-size: 14px; /* Letra da resposta bem pequena */
+    font-size: 12px; /* Aumentei levemente para 13px para não sumir perto dos 20px do título */
     color: #6d4c41;
-    line-height: 1.4;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* AJUSTE DO TEXTO PARA FICAR AO LADO DO ÍCONE */
+.faq-content {
+    margin-left: 20px;
+    text-align: left;
 }
 
 /* ==========================================================================
    GUARANTEE SECTION
    ========================================================================== */
-.guarantee-card {
-    background: var(--white);
-    border-radius: 30px;
-    padding: 50px;
-    max-width: 600px;
-    margin: 0 auto;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+/* FUNDO DA SEÇÃO */
+.guarantee-wrap {
+    background-color: #ffffff;
 }
 
-.risco-zero-box {
-    background: var(--chocolate-light);
-    padding: 15px;
-    border-radius: 50px;
-    font-weight: 800;
-    color: var(--brown-gold);
+/* CARD DE GARANTIA (ESTREITO E MINIMALISTA) */
+.guarantee-card-final {
+    background-color: #ffffff;
+    border: 1px solid #F5D87A; /* Borda dourada padronizada */
+    border-radius: 25px;
+    padding: 60px 40px;
+    max-width: 650px; /* Card estreito conforme a imagem */
+    width: 100%;
+    text-align: center;
+}
+
+/* CÍRCULO DO ÍCONE */
+.g-icon-circle {
+    background-color: #3d2314; /* Marrom escuro */
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.g-icon-circle i {
+    color: #F5D87A; /* Dourado no ícone */
+    font-size: 28px;
+}
+
+/* TÍTULO (PLAYFAIR DISPLAY) */
+.g-title {
+    font-family: "Playfair Display", serif !important;
+    font-size: 32px !important;
+    color: rgb(78, 47, 20) !important;
+    font-weight: 400 !important;
+}
+
+/* TEXTOS */
+.g-text {
+    font-size: 14px;
+    color: #6d4c41;
+    line-height: 1.6;
+}
+
+.g-trust-text {
+    font-size: 11px; /* Letra bem pequena conforme a imagem */
+    color: #BB905C;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+/* PILL "RISCO ZERO" */
+.g-risk-pill {
+    background-color: #fcf9f2;
+    border: 1px solid rgba(187, 144, 92, 0.15);
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 40px;
+    border-radius: 12px;
+}
+
+/* TEXTO "RISCO ZERO" - COM GRADIENTE CORRIGIDO */
+.g-risk-text {
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    font-size: 24px;
+    background: linear-gradient(to right, #8b5e2a, #BB905C);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    color: transparent; 
+}
+
+.g-hand {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+/* DIVISOR SUTIL */
+.g-divider {
+    border: 0;
+    border-top: 1px solid #eee;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* FOOTER DE ÍCONES */
+.g-footer-grid i {
+    color: #8b5e2a;
+    font-size: 16px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.g-footer-grid span {
+    font-size: 10px;
+    color: #BB905C;
+    text-transform: capitalize;
 }
 
 /* ==========================================================================
