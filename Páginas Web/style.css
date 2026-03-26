@@ -356,9 +356,31 @@ p {
 }
 
 .image-container-truth {
-    display: flex;
     justify-content: center;
+    position: relative;
+    display: inline-block;
     margin-top: 30px;  /* espaçamento da imagem em relação ao texto */
+}
+
+
+.img-fluid {
+    width: 100%; /* Garantir que a imagem tenha largura responsiva */
+    border-radius: 10px; /* Bordas arredondadas na imagem */
+}
+
+.box-profit {
+    position: absolute;
+    bottom: 5px; /* Coloca a caixa na parte inferior da imagem */
+    left: 70%; /* Move a caixa para a esquerda */
+    transform: translateX(-10%); /* Ajusta para garantir o centralizado */
+    background-color: #E8C44A; /* Cor de fundo amarela */
+    padding: 5px 15px; /* Ajuste o padding para diminuir o tamanho da caixa */
+    border-radius: 20px; /* Bordas arredondadas */
+    color: #000; /* Cor do texto agora é preta */
+    font-weight: bold; /* Texto em negrito */
+    font-size: 14px; /* Reduzir o tamanho da fonte */
+    text-align: center; /* Alinhamento do texto */
+    font-family: 'Arial', sans-serif; /* Alterar a fonte */
 }
 
 /* ==========================================================================
@@ -379,7 +401,7 @@ p {
 
 .benefit-box {
     border-radius: 20px;        /* bordas mais arredondadas */
-    padding: 30px, 25px;              /* mantém espaçamento interno */
+    padding: 30px  25px;              /* mantém espaçamento interno */
     font-size: 14px;            /* letras menores */
     transition: all 0.3s ease;  /* efeito suave */
     box-shadow: 0 4px 10px rgba(0,0,0,0.05); /* leve sombra */
@@ -390,79 +412,74 @@ p {
 
 /* Box de oferta em destaque */
 .featured-offer-box {
-    background-color: #4E2F1B;    /* cor de fundo escura */
-    color: #FFFFFF;               /* texto branco */
-    border-radius: 20px;          /* bordas arredondadas */
-    min-height: 300px;
-    max-width: 95%;            /* altura mínima */
-    padding: 2rem;                /* espaçamento interno */
+    background-color: #4E2F14; /* Cor de fundo escura */
+    color: #FFFFFF;            /* Texto branco */
+    border-radius: 20px;       /* Bordas arredondadas */
+    min-height: 280px;         /* Altura mínima */
+    max-width: 1200px;
+    width: 100%;
+    margin: 5rem auto;          /* Largura máxima */
+    padding: 1.8rem 2.2rem;             /* Espaçamento interno */
     position: relative;
     overflow: hidden;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.1); /* sombra suave */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
 
 /* Badge "NOVO" */
 .featured-offer-box .badge-new {
     position: absolute;
-    top: 15px;
-    left: 15px;
-    background-color: #E9BD6C;
-    color: #4E2F1B;
+    top: 10%;
+    left: 23%;
+    background-color: #E8760A; 
+    color: #FFFFFF;            
     font-weight: bold;
     padding: 0.3rem 0.8rem;
     border-radius: 12px;
     font-size: 0.8rem;
+    font-family: 'Nunito', sans-serif;
 }
 
-/* Placeholder do livro/ícone */
-.book-placeholder {
-    background-color: #fff;
-    color: #4E2F1B;
-    border-radius: 15px;
-    padding: 1.5rem;
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-.book-placeholder span {
-    font-size: 3rem;
-}
-
-.book-placeholder p {
-    font-size: 0.85rem;
-    font-weight: bold;
-    margin-top: 0.5rem;
+/* Imagem do eBook */
+.img-ebook {
+    width: 60%; /* Define a largura da imagem para 50% */
+    border: 5px solid #E8C44A; /* Borda dourada ao redor da imagem */
+    border-radius: 10px;       /* Bordas arredondadas na imagem */
+    box-sizing: border-box;    /* Inclui a borda no cálculo do tamanho */
 }
 
 /* Títulos e parágrafos */
 .featured-offer-box h3 {
-    font-size: 1.5rem;
+    font-size: 2.3rem;
     font-weight: bold;
     color: #FFF8EE;
+    font-family: 'Playfair Display', serif;
 }
 
 .featured-offer-box p {
     font-size: 1rem;
     opacity: 0.85;
-    color: #E8C992;
+    color: #E8C9A0; /* Cor suave para o texto */
+    font-family: 'Nunito', sans-serif;
 }
 
+
 /* Botão CTA */
-.featured-offer-box .btn-cta {
-    background-color: #E9BD6C;
-    color: #4E2F1B;
+.featured-offer-box .btn-ctbook {
+    background-color: #E8760A; /* Cor do botão semelhante ao fundo da tag 'NOVO' */
+    color: #fff;            /* Cor do texto do botão */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
     font-weight: bold;
-    padding: 0.8rem 2rem;
-    border-radius: 12px;
+    cursor: pointer;
+    font-family: 'Nunito', sans-serif; /* Aplica a fonte Nunito ao botão */
     transition: all 0.3s ease;
 }
 
-.featured-offer-box .btn-cta:hover {
-    background-color: #d4a94f;
+.featured-offer-box .btn-ctbook:hover {
+    background-color: #E8760A;
     color: #fff;
+    transform: scale(1.1);
 }
 
 
@@ -472,17 +489,42 @@ p {
     margin-bottom: 6px;
 }
 
+.container {
+    max-width: 1000px;     /* ✅ Container menor e centralizado */
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.grouped-benefits .row {
+    display: flex;
+    justify-content: space-between; /* Garante que as colunas fiquem próximas */
+    gap: 10px; /* Ajuste o gap para controlar o espaço entre as colunas */
+}
+
+/* Garantir que as colunas fiquem mais próximas, removendo margens extras */
+.grouped-benefits .col-md-6 {
+    margin: 0;  /* Remove margens extras */
+    padding: 0; /* Remove padding para garantir que fiquem bem próximos */
+}
+
+
+
+.grouped-benefits .benefit-box {
+    padding: 1rem; /* Ajusta o espaçamento interno para dar o visual desejado */
+}
+
+
+.row .col-md-6 {
+    margin-bottom: 10px; /* Ajuste a margem inferior para as colunas */
+}
+
 /* Parágrafos dentro da box */
 .benefit-box p {
     font-size: 14px;
     line-height: 1.4;
 }
 
-.icon-title {
-    color: #E9BD6C;
-    font-size: 14px;
-    margin-right: 4px;
-}
 
 .section-light i {
     background-color: #6b4521;
