@@ -28,6 +28,7 @@ h2, .main-title-pro, .truth-title, .faq-main-title, .premium-title, .guarantee-t
     line-height: 48px !important;
 }
 
+
 h1,h3, h4 {
     font-family: 'Playfair Display', serif;
     font-size: 42px;
@@ -47,6 +48,26 @@ p {
     font-size: 16px;
     line-height: 1.6;
     color: #6d4c41;
+}
+
+.txt-pascoa-premium {
+    /* Gradiente que simula reflexo de metal */
+    background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+    -webkit-background-clip: text; /* Motores Webkit (Chrome, Safari, Edge) */
+     background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    font-weight: 800 !important;
+    font-size: 2.5rem; /* Aumentei um pouco para dar impacto */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    filter: drop-shadow(0px 4px 5px rgba(0, 0, 0, 0.5));
+}
+
+
+p.fs-4.txt-pascoa-premium {
+    font-size: 1.8rem !important;
+    text-transform: uppercase; /* Opcional: deixa a primeira frase mais impactante */
 }
 /* ==========================================================================
    COMPONENTES GLOBAIS (BOTÕES E HIGHLIGHTS)
@@ -1204,6 +1225,148 @@ p {
     font-size: 10px;
     color: #BB905C;
     text-transform: capitalize;
+}
+
+/* ==========================================================================
+   AGE DE PÁSCOA
+   ========================================================================== */
+/* Importação das fontes */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&family=Playfair+Display:wght@400;700&display=swap');
+
+.age-pascoa {
+  width: 100%;
+  /* Altura reduzida para ser mais compacta */
+  min-height: 600px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('image/ovos.jpeg');
+  background-size: cover;
+  background-position: center;
+  padding: 60px 20px;
+}
+
+.container-pascoa {
+  max-width: 900px;
+  display: flex;
+  flex-direction: column; /* Garante que tudo fique um embaixo do outro */
+  align-items: center;    /* Centraliza horizontalmente */
+}
+
+.titulo-principal {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 60px;
+  line-height: 1.1;
+  color: rgb(255, 248, 238);
+  margin-bottom: 20px;
+}
+
+.titulo-principal .destaque {
+  color: rgb(232, 196, 74);
+  font-weight: 700;
+}
+
+.subtitulo {
+  font-family: 'Nunito', sans-serif;
+  font-size: 18px;
+  color: rgb(184, 128, 58) !important;
+  margin-bottom: 35px;
+  line-height: 1.5;
+}
+
+/* Card de Preço com Borda Dourada */
+.card-investimento {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border: 0.8px solid #FFD700; /* Borda Dourada */
+  border-radius: 15px;
+  padding: 25px 50px;
+  margin-bottom: 20px;
+  font-family: 'Nunito', sans-serif;
+  transition: transform 0.3s ease;
+}
+
+.card-investimento * {
+  color: rgb(232, 196, 74) !important;
+}
+
+.card-investimento p {
+  color: rgb(232, 196, 74) !important;
+}
+
+
+.label-investimento {
+  font-size: 14px;
+  color: rgb(232, 196, 74) !important;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.preco {
+  font-size: 28px;
+  font-weight: 700;
+  color: #fff;
+}
+
+/* O número 37 em Destaque Total */
+.valor {
+  color: #FFD700 !important; 
+  font-family: 'Nunito', sans-serif;
+  font-weight: 900;
+  font-size: 80px; /* Bem grande para converter */
+  line-height: 1;
+  text-shadow: 0 0 15px rgba(255, 215, 0, 0.8); /* Brilho dourado */
+  display: inline-block;
+}
+
+.garantia-extra {
+  font-size: 13px;
+  color: rgb(232, 196, 74) !important;
+  opacity: 0.9;
+  margin-top: 10px;
+}
+
+/* Botão Pulsante */
+.botao-lucrar {
+  display: inline-block;
+  background-color: #e87c0d; 
+  color: #ffffff;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 900;
+  font-size: 22px;
+  text-decoration: none;
+  padding: 22px 50px;
+  border-radius: 50px;
+  text-transform: uppercase;
+  margin-top: 20px;
+  animation: pulsar 1.5s infinite;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+/* Texto de segurança com cor melhorada para leitura */
+.texto-seguro {
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px;
+  color: rgb(184, 128, 58) !important; /* Cor clara para destacar no fundo escuro */
+  margin-top: 20px;
+  font-weight: 400;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+}
+
+/* Animação do Botão */
+@keyframes pulsar {
+  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(232, 124, 13, 0.7); }
+  70% { transform: scale(1.06); box-shadow: 0 0 0 15px rgba(232, 124, 13, 0); }
+  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(232, 124, 13, 0); }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .titulo-principal { font-size: 38px; line-height: 1.2; }
+  .valor { font-size: 60px; }
+  .botao-lucrar { font-size: 16px; padding: 18px 20px; width: 90%; }
 }
 
 /* ==========================================================================
