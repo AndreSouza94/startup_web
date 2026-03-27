@@ -93,7 +93,6 @@ p.fs-4.txt-pascoa-premium {
 }
 
 .btn-cta:hover, .btn-cta-final:hover, .u-btn-main:hover {
-    background-color: var(--chocolate-dark) !important;
     color: var(--gold-highlight) !important;
     transform: translateY(-3px);
 }
@@ -486,21 +485,27 @@ p.fs-4.txt-pascoa-premium {
 
 /* Botão CTA */
 .featured-offer-box .btn-ctbook {
-    background-color: #E8760A; /* Cor do botão semelhante ao fundo da tag 'NOVO' */
-    color: #fff;            /* Cor do texto do botão */
+    background-color: var(--accent-orange) !important;
+    color: var(--white) !important;           /* Cor do texto do botão */
     border: none;
     padding: 10px 20px;
-    border-radius: 20px;
+    border-radius: 50px !important;
+    border: none;
     font-weight: bold;
     cursor: pointer;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+
     font-family: 'Nunito', sans-serif; /* Aplica a fonte Nunito ao botão */
     transition: all 0.3s ease;
 }
 
 .featured-offer-box .btn-ctbook:hover {
     background-color: #E8760A;
-    color: #fff;
-    transform: scale(1.1);
+    color: var(--gold-highlight) !important;
+    transform: translateY(-3px)
 }
 
 
@@ -1180,7 +1185,7 @@ p.fs-4.txt-pascoa-premium {
 
 /* PILL "RISCO ZERO" */
 .g-risk-pill {
-    background-color: #fcf9f2;
+    background-color: #3d2314;
     border: 1px solid rgba(187, 144, 92, 0.15);
     display: inline-flex;
     align-items: center;
@@ -1193,7 +1198,7 @@ p.fs-4.txt-pascoa-premium {
     font-family: "Playfair Display", serif;
     font-weight: 700;
     font-size: 24px;
-    background: linear-gradient(to right, #8b5e2a, #BB905C);
+    background: linear-gradient(to right, #FFFF, #ffff);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent; 
