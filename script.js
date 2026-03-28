@@ -28,10 +28,15 @@ document.addEventListener('DOMContentLoaded', function() {
     // 24 horas em segundos (86400)
     const vinteQuatroHoras = 24 * 60 * 60;
     startTimer(vinteQuatroHoras);
-    // 1. Inicializar Animações AOS
-    if (typeof AOS !== 'undefined') {
-        AOS.init({ duration: 1000, once: true });
-    }
+   // Inicializar Animações AOS com transições mais lentas
+if (typeof AOS !== 'undefined') {
+    AOS.init({ 
+        duration: 1500,  // Aumentado de 1000 para 1500 (1.5 segundos)
+        offset: 200,     // O elemento só aparece após 200px de rolagem
+        easing: 'ease-in-out', // Deixa o movimento mais fluido no início e fim
+        once: true       // A animação acontece apenas uma vez ao rolar
+    });
+}
 
     // 2. Localizar o elemento do Timer (ajuste o ID conforme seu HTML)
     // No seu index.html ele deve ter o id="timer" ou id="countdown"
