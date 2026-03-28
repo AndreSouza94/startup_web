@@ -43,6 +43,7 @@ h1,h3, h4 {
     }
 }
 
+
 p {
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
@@ -188,7 +189,7 @@ p.fs-4.txt-pascoa-premium {
     flex-direction: column;
     align-items: center; /* Centraliza o conteúdo horizontalmente */
     justify-content: center; /* Centraliza o conteúdo verticalmente */
-    padding: 40px 180px;
+    padding: 40px 20px;
     box-sizing: border-box;
 }
 
@@ -275,12 +276,31 @@ p.fs-4.txt-pascoa-premium {
     line-height: 1.4;
 }
 
+/* Localize sua @media (max-width: 992px) e atualize a .cards-row-pro */
 @media (max-width: 992px) {
     .cards-row-pro {
-        grid-template-columns: 1fr; /* Empilha no mobile */
-        max-width: 400px;
-        margin-left: auto;
-        margin-right: auto;
+        display: flex;
+        flex-direction: column; /* Faz os cards empilharem */
+        align-items: center;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .card-item-pro {
+        max-width: 100%; /* Permite que o card ocupe a largura disponível */
+        width: 100%;
+    }
+    
+    .quote-box-pro {
+        padding: 15px;
+        margin: 20px 10px; /* Dá um respiro nas laterais do box de dúvida */
+    }
+}
+
+/* Adicione esta regra para manter o visual espaçoso apenas em computadores */
+@media (min-width: 992px) {
+    .opportunity-section-pro {
+        padding: 80px 180px;
     }
 }
 
@@ -913,6 +933,25 @@ p.fs-4.txt-pascoa-premium {
     font-size: 0.9rem;
 }
 
+/* --- AJUSTE PARA CELULAR  --- */
+@media (max-width: 576px) {
+    /* Reduz o recuo lateral do card para dar mais espaço aos selos */
+    .offer-card {
+        padding: 40px 15px !important; 
+    }
+
+    .card-footer-trust {
+        flex-wrap: wrap;       /* Permite que os itens quebrem linha e não saiam do card */
+        justify-content: center; /* Centraliza os selos no celular */
+        gap: 15px;             /* Aumenta o espaço entre os selos quando empilhados */
+    }
+
+    .card-footer-trust div {
+        flex: 0 1 auto;        /* Garante que cada bloco se ajuste ao conteúdo */
+        justify-content: center;
+    }
+}
+
 
 /* ==========================================================================
    UPSELL & FAQ
@@ -1261,7 +1300,7 @@ p.fs-4.txt-pascoa-premium {
 
 .titulo-principal {
   font-family: "Playfair Display", Georgia, serif;
-  font-size: 60px;
+  font-size: clamp(32px, 5vw, 50px); /* Ajusta entre 32px e 60px conforme a tela */
   line-height: 1.1;
   color: rgb(255, 248, 238);
   margin-bottom: 20px;
